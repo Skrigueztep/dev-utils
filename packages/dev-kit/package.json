@@ -2,12 +2,14 @@
   "name": "dev-kit",
   "version": "0.0.0",
   "main": "dist/index.js",
+  "types": "./dist/types",
   "bin": {
     "dev-kit": "dist/main.js"
   },
   "scripts": {
     "dev": "tsc --watch",
     "build": "tsc",
+    "link": "npm run build && npm link --force",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
