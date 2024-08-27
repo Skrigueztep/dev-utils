@@ -1,4 +1,4 @@
-import {Generator, GeneratorParams} from "../generate/generator";
+import {Generator, GeneratorParams} from "../core/generate/generator";
 import {join} from "path";
 
 export class VueGenerator extends Generator implements GeneratorParams {

@@ -1,1 +1,1 @@
-export * from './cli/generate/generator';
+export * from './cli/core/generate/generator';
