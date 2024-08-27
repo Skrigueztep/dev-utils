@@ -5,7 +5,12 @@ interface Initializer {
 }
 
 export abstract class State {
-  protected constructor(_?: ConsoleArgs) { }
+
+  public version: boolean;
+
+  protected constructor(args?: ConsoleArgs) {
+    this.version = (args && args['version']) ? args['version'] as boolean : false;
+  }
 }
 
 export abstract class CLI<T extends State> implements Initializer {
