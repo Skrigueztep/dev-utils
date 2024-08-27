@@ -15,7 +15,7 @@ export class State extends IState implements StateDefinition {
   public path: string;
 
   constructor(args?: ConsoleArgs) {
-    super();
+    super(args);
     this.generate = (args && args['generate']) ? args['generate'] as GeneratorsEnum : GeneratorsEnum.VUE;
     this.path = (args && args['path']) ? resolve(cwd(), args['path'] as string) : resolve(cwd(), '');
   }
