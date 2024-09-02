@@ -9,7 +9,8 @@
   "license": "ISC",
   "description": "",
   "workspaces": [
-    "packages/dev-kit"
+    "packages/dev-kit",
+    "packages/dev-feed"
   ],
   "devDependencies": {
     "@types/node": "^22.5.0",
