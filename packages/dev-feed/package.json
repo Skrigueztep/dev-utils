@@ -2,7 +2,7 @@
   "name": "dev-feed",
   "version": "0.0.0",
   "bin": {
-    "dev-kit": "dist/main.js"
+    "dev-feed": "dist/main.js"
   },
   "scripts": {
     "dev": "tsc --watch",
