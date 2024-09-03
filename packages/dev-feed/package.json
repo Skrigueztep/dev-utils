@@ -16,6 +16,6 @@
   "description": "",
   "dependencies": {
     "dev-kit": "^0.0.0",
-    "puppeteer": "^23.2.1"
+    "playwright": "^1.46.1"
   }
 }
