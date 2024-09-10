@@ -1,5 +1,5 @@
 {
-  "name": "dev-kit",
+  "name": "@skrigueztep/dev-kit",
   "version": "0.0.0",
   "main": "dist/index.js",
   "types": "./dist/types",
