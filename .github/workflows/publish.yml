@@ -1,0 +1,43 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  release_dev-feed:
+    if: github.repository == 'Skrigueztep/dev-utils' && contains(github.event.head_commit.message, 'dev-feed')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: NodeJS Installation
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.x
+          registry-url: 'https://registry.npmjs.org'
+      - name: Dependencies Installation
+        run: npm install
+      - name: Build and Publish
+        run: npm run build:dev-feed && npm run publish -w=dev-feed
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.ORG_NPM_TOKEN }}
+
+  release_dev-kit:
+    if: github.repository == 'Skrigueztep/dev-utils' && contains(github.event.head_commit.message, 'dev-kit')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: NodeJS Installation
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.x
+          registry-url: 'https://registry.npmjs.org'
+      - name: Dependencies Installation
+        run: npm install
+      - name: Build and Publish
+        run: npm run build:dev-kit && npm run publish -w=dev-kit
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.ORG_NPM_TOKEN }}
