@@ -9,6 +9,9 @@ jobs:
   release_dev-feed:
     if: github.repository == 'Skrigueztep/dev-utils' && contains(github.event.head_commit.message, 'dev-feed')
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
