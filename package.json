@@ -2,6 +2,8 @@
   "name": "dev-utils",
   "version": "0.0.0",
   "scripts": {
+    "build:devkit": "npm run build -w=dev-kit",
+    "build:dev-feed": "npm run build -w=dev-feed",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
