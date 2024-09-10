@@ -1,6 +1,6 @@
 import { Page } from "playwright";
-import {Site} from "../application/site";
-import {Data} from "../domain/data";
+import {Site} from "../../application/site";
+import {Data} from "../../domain/data";
 
 export class NodeJS extends Site {
 
@@ -23,7 +23,7 @@ export class NodeJS extends Site {
           type: subtitle?.textContent || '',
           author: authorName?.textContent || '',
           link: title?.href || '',
-          date: date?.textContent || ''
+          date: new Date(date?.textContent || '').toLocaleDateString()
         } as Data;
       });
 
