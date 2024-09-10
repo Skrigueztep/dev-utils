@@ -9,6 +9,11 @@
   "bin": {
     "dev-kit": "dist/main.js"
   },
+  "repository": {
+    "url": "https://github.com/Skrigueztep/dev-utils",
+    "type": "git",
+    "directory": "packages/dev-kit"
+  },
   "scripts": {
     "dev": "tsc --watch",
     "build": "rm -rf dist && tsc && cp -R src/assets dist/assets",
